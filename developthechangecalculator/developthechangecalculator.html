@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>The Change Calculator</title>
+<meta charset="utf-8">
+</head>
+<body>
+
+<!---Jenny Hayes, 2/13/21 Lab3,  Find the number of each coins are needed to make change --->
+
+  <script type="text/javascript">
+
+    let makeChange=function(cents){       //variable function
+
+        let quarters=0;
+        let dimes=0;
+        let nickels=0;
+        let pennies=0;
+
+ {
+        if(cents>=25){
+          quarters=Math.floor(cents/25);   //finding the number of quarters
+          cents=cents%25;
+
+        }
+         if(cents>=10){
+		    dimes=Math.floor(cents/10);  //finding the number of dimes
+            cents=cents%10;
+
+         }
+         if(cents>=5){
+            nickels=Math.floor(cents/5);  //finding the number of nickels
+            cents=cents%5;
+
+         }
+        if(cents>=1){
+           pennies=Math.floor(cents/1);  //finding the number of pennies
+           cents=cents%1;
+
+         }
+
+	document.write("The number of quarters " +quarters+ "," + " dimes " + dimes + " , " + " nickels " +nickels+ " , " + " and " + " pennies " + pennies);
+}
+   };
+  var userEntry=parseInt(prompt("Enter the amount of cents from 0 to 99. ", ""));
+         makeChange(userEntry);
+
+    </script>
+
+  </body>
+</html>
